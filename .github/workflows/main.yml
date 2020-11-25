@@ -11,7 +11,7 @@ jobs:
         uses: ./
         id: findandreplace
         with:
-          find: 'refs/head/'
+          find: 'refs/heads/'
           replace: ''
       - name: Get the final output
         run: echo "The replaced value is ${{ steps.findandreplace.outputs.value }}"
