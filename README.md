@@ -1,12 +1,16 @@
-# Find-and-replace on branch names
+# Find and replace strings
 
-This action executes find-and-replace on your branch name. 
+This action executes find-and-replace on a given string (hint: use `github.ref` to get your branch name and apply this on it for use in another action). 
 
 ## Inputs
 
+### `string`
+
+**Required** The source string to apply this action to
+
 ### `find`
 
-**Required** The text you want to search for within the branch name (eg. `ref/head/`)
+**Required** The text you want to search for within the branch name (eg. `ref/heads/`)
 
 ### `replace`
 
@@ -21,9 +25,9 @@ The new value containing the found-and-replaced string.
 ### Example usage
 
 ```yaml
-uses: mad9000/actions-find-and-replace-branch-name@v1
+uses: mad9000/actions-find-and-replace-string@v1
 with:
-    find: 'ref/head/'
+    find: 'ref/heads/'
     replace: ''
 ```
 

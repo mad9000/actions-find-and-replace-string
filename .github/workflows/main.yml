@@ -3,7 +3,7 @@ on: [push]
 jobs:
   find-and-replace-job:
     runs-on: ubuntu-latest
-    name: 'Find and replace branch names'
+    name: 'Find and replace on a string'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -11,6 +11,7 @@ jobs:
         uses: ./
         id: findandreplace
         with:
+          string: ${{ github.env }}
           find: 'refs/heads/'
           replace: ''
       - name: Get the above output
@@ -19,6 +20,7 @@ jobs:
         uses: ./
         id: findandreplace2
         with:
+          string: ${{ steps.findandreplace.outputs.value }}
           find: '/'
           replace: '-'
       - name: Get the final output

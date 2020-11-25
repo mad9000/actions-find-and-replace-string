@@ -1,7 +1,7 @@
 {
-  "name": "find-and-replace-on-branch",
+  "name": "find-and-replace-string",
   "version": "1.0.0",
-  "description": "Find-and-replace on branch names",
+  "description": "Find-and-replace on a string",
   "main": "index.js",
   "author": "Kishyr Ramdial <kishyr@mad.app>",
   "license": "MIT",
