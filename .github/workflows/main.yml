@@ -7,11 +7,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Run find-and-replace
+      - name: Run find-and-replace to remove refs/heads/
         uses: ./
         id: findandreplace
         with:
           find: 'refs/heads/'
           replace: ''
-      - name: Get the final output
+      - name: Get the above output
         run: echo "The replaced value is ${{ steps.findandreplace.outputs.value }}"
+      - name: Run find-and-replace to remove refs/heads/
+        uses: ./
+        id: findandreplace2
+        with:
+          find: '/'
+          replace: '-'
+      - name: Get the final output
+        run: echo "The replaced value is ${{ steps.findandreplace2.outputs.value }}"
