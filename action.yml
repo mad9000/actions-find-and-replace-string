@@ -1,0 +1,15 @@
+name: 'Find-and-replace on branch names'
+description: 'Finds and replaces text on branch names'
+inputs:
+  find:
+    description: 'Text you want to look for'
+    required: true
+  replace:
+    description: 'Text you want to replace with'
+    required: true
+outputs:
+  value:
+    description: 'The new branch name after find-and-replace has been run'
+runs:
+  using: 'node12'
+  main: 'index.js'

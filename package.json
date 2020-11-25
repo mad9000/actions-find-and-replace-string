@@ -1,0 +1,12 @@
+{
+  "name": "find-and-replace-on-branch",
+  "version": "1.0.0",
+  "description": "Find-and-replace on branch names",
+  "main": "index.js",
+  "author": "Kishyr Ramdial <kishyr@mad.app>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  find-and-replace-job:
+    runs-on: ubuntu-latest
+    name: 'Find and replace branch names'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run find-and-replace
+        uses: ./
+        id: findandreplace
+        with:
+          find: 'refs/head/'
+          replace: ''
+      - name: Get the final output
+        run: echo "The replaced value is ${{ steps.findandreplace.outputs.value }}"
