@@ -1,5 +1,5 @@
-name: 'Find-and-replace on branch names'
-description: 'Finds and replaces text on branch names'
+name: 'Find-and-replace strings'
+description: 'Finds and replaces text on a string'
 author: "Kishyr Ramdial"
 branding:
   color: purple
