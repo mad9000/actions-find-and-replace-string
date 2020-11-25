@@ -4,7 +4,7 @@ This action executes find-and-replace on a given string (hint: use `github.ref` 
 
 ## Inputs
 
-### `string`
+### `source`
 
 **Required** The source string to apply this action to
 

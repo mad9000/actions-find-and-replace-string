@@ -11,7 +11,7 @@ jobs:
         uses: ./
         id: findandreplace
         with:
-          string: ${{ github.env }}
+          source: ${{ github.env }}
           find: 'refs/heads/'
           replace: ''
       - name: Get the above output
@@ -20,7 +20,7 @@ jobs:
         uses: ./
         id: findandreplace2
         with:
-          string: ${{ steps.findandreplace.outputs.value }}
+          source: ${{ steps.findandreplace.outputs.value }}
           find: '/'
           replace: '-'
       - name: Get the final output
