@@ -1,7 +1,7 @@
 name: 'Find-and-replace on branch names'
 description: 'Finds and replaces text on branch names'
 inputs:
-  strings:
+  string:
     description: 'The text you want to run this action on'
     required: true
   find:
