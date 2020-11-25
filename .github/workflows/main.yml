@@ -15,7 +15,7 @@ jobs:
           replace: ''
       - name: Get the above output
         run: echo "The replaced value is ${{ steps.findandreplace.outputs.value }}"
-      - name: Run find-and-replace to remove refs/heads/
+      - name: Run find-and-replace to remove slashes
         uses: ./
         id: findandreplace2
         with:
