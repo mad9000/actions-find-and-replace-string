@@ -25,7 +25,7 @@ The new value containing the found-and-replaced string.
 ### Example usage
 
 ```yaml
-uses: mad9000/actions-find-and-replace-string@3
+uses: mad9000/actions-find-and-replace-string@2
 with:
     source: ${{ github.ref }} # this translates to ref/heads/main on the main branch, but can be any arbitrary string 
     find: 'ref/heads/'        # we want to remove ref/heads/ from source 
