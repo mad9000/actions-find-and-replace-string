@@ -11,7 +11,7 @@ jobs:
         uses: ./
         id: findandreplace
         with:
-          source: ${{ github.env }}
+          source: ${{ github.ref }}
           find: 'refs/heads/'
           replace: ''
       - name: Get the above output
