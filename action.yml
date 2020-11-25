@@ -5,7 +5,7 @@ inputs:
     description: 'The text you want to run this action on'
     required: true
   find:
-    description: 'The text you're looking for'
+    description: 'The text you are looking for'
     required: true
   replace:
     description: 'The text you want to replace with'
