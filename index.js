@@ -8,6 +8,6 @@ try {
 
     core.setOutput('value', branchName)
     console.log('branch name:', branchName)
-} catch (e) {
+} catch (error) {
     core.setFailed(error.message)
 }
