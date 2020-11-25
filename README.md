@@ -20,8 +20,10 @@ The new value containing the found-and-replaced string.
 
 ### Example usage
 
-uses: actions/find-and-replace-branch-name@v1
+```yaml
+uses: mad9000/actions-find-and-replace-branch-name@v1
 with:
     find: 'ref/head/'
     replace: ''
+```
 
