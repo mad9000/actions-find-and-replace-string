@@ -16,6 +16,10 @@ This action executes find-and-replace on a given string (hint: use `${{ github.r
 
 **Required** The text you want to replace (eg. `head-`, ``, `root_`)
 
+### `replaceAll`
+
+**Optional** Should replace all occurrences? (only 'true' string will be interpreted positive)
+
 ## Outputs
 
 ### `value`

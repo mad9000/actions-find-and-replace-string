@@ -1,6 +1,6 @@
 name: 'Find-and-replace strings'
 description: 'Finds and replaces text on a string'
-author: "Kishyr Ramdial"
+author: 'Kishyr Ramdial'
 branding:
   color: purple
   icon: copy
@@ -14,9 +14,12 @@ inputs:
   replace:
     description: 'The text you want to replace with'
     required: true
+  replaceAll:
+    description: 'Replace all occurrences?'
+    required: false
 outputs:
   value:
     description: 'The new value after find-and-replace has been run'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'index.js'
