@@ -1,5 +1,5 @@
 const core = require('@actions/core')
-const github = require('@actions/github')
+const fs = require('fs')
 
 try {
     const source = core.getInput('source')
@@ -7,8 +7,8 @@ try {
     const replace = core.getInput('replace')
     const replaceAllInput = core.getInput('replaceAll')
     const replaceAll = replaceAllInput ? replaceAllInput == 'true' : false
-    const branchName = replaceAll ? source.replaceAll(find, replace) : source.replace(find, replace)
-    core.setOutput('value', branchName)
+    const resultValue = replaceAll ? source.replaceAll(find, replace) : source.replace(find, replace)
+    fs.writeFileSync(process.env.GITHUB_OUTPUT, `value=${resultValue}\n`)
 } catch (error) {
     core.setFailed(error.message)
 }
