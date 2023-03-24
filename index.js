@@ -8,7 +8,7 @@ try {
     const replaceAllInput = core.getInput('replaceAll')
     const replaceAll = replaceAllInput ? replaceAllInput == 'true' : false
     const resultValue = replaceAll ? source.replaceAll(find, replace) : source.replace(find, replace)
-    fs.writeFileSync(process.env.GITHUB_OUTPUT, `value=${resultValue}\n`)
+    core.setOutput('value', resultValue)
 } catch (error) {
     core.setFailed(error.message)
 }
