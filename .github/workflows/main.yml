@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run find-and-replace to remove refs/heads/
-        uses: mad9000/actions-find-and-replace-string@3
+        uses: mad9000/actions-find-and-replace-string@4
         id: findandreplace
         with:
           source: ${{ github.ref }}
@@ -17,7 +17,7 @@ jobs:
       - name: Get the above output
         run: echo "The replaced value is ${{ steps.findandreplace.outputs.value }}"
       - name: Run find-and-replace to remove slashes
-        uses: mad9000/actions-find-and-replace-string@1
+        uses: mad9000/actions-find-and-replace-string@4
         id: findandreplace2
         with:
           source: ${{ steps.findandreplace.outputs.value }}
